@@ -1,21 +1,11 @@
 import * as d3 from "d3";
 import { motion } from "framer-motion";
 
-const points: [number, number][] = [
-  [2, 0],
-  [4, 4],
-  [6, 10],
-  [8, 20],
-  [10, 15],
-  [12, 13],
-  [14, 18],
-  [16, 11],
-  [18, 9],
-  [20, 5],
-];
+type Points = [number, number][];
+type MotionGraphProps = {
+  dataPoints: Points;
+};
 
-const xPoints = points.map((p) => p[0]) as number[];
-const yPoints = points.map((p) => p[1]) as number[];
 const height = 200;
 const width = 400;
 
@@ -31,7 +21,13 @@ const margins = {
   left: 20,
 };
 
-export default function Test() {
+ const MotionGraph = ({dataPoints} : MotionGraphProps) => {
+  
+const points = dataPoints;
+
+const xPoints = points.map((p) => p[0]) as number[];
+const yPoints = points.map((p) => p[1]) as number[];
+
   const xExtent = d3.extent(xPoints) as [number, number];
   const yExtent = d3.extent(yPoints) as [number, number];
   const xScale = d3
@@ -91,7 +87,7 @@ export default function Test() {
         {/* Circles */}
         {circles.map((circle) => circle)}
       </svg>
-      <p>Test</p>
     </div>
   );
 }
+export default MotionGraph
