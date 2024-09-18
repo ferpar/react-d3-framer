@@ -21,12 +21,11 @@ const margins = {
   left: 20,
 };
 
- const MotionGraph = ({dataPoints} : MotionGraphProps) => {
-  
-const points = dataPoints;
+const MotionChart = ({ dataPoints }: MotionGraphProps) => {
+  const points = dataPoints;
 
-const xPoints = points.map((p) => p[0]) as number[];
-const yPoints = points.map((p) => p[1]) as number[];
+  const xPoints = points.map((p) => p[0]) as number[];
+  const yPoints = points.map((p) => p[1]) as number[];
 
   const xExtent = d3.extent(xPoints) as [number, number];
   const yExtent = d3.extent(yPoints) as [number, number];
@@ -50,7 +49,7 @@ const yPoints = points.map((p) => p[1]) as number[];
     const y = yScale(point[1]);
     return (
       <motion.circle
-        initial={{ cy: height- margins.bottom, opacity: 0, scale: 0 }}
+        initial={{ cy: height - margins.bottom, opacity: 0, scale: 0 }}
         animate={{ cy: y, opacity: 1, scale: 1 }}
         transition={{ duration: 0.2, delay: (idx / points.length) * 1.5 }}
         key={`${x}-${y}`}
@@ -77,6 +76,7 @@ const yPoints = points.map((p) => p[1]) as number[];
       <svg style={styles} viewBox={`0 0 ${width} ${height}`}>
         {/* Line */}
         <motion.path
+          key={linePath}
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
           transition={{ duration: 1.7, delay: 0.2 }}
@@ -89,5 +89,5 @@ const yPoints = points.map((p) => p[1]) as number[];
       </svg>
     </div>
   );
-}
-export default MotionGraph
+};
+export default MotionChart;
