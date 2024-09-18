@@ -29,7 +29,7 @@ function App() {
       <p>
         Interactive animated graphs become simple with this set of technologies
       </p>
-      <div>
+      <div className="demoCard">
         <div>
           <h3>Full Rerendering + Rescale</h3>
           <button onClick={addRandomDatapoint}>Add Datapoint</button>
@@ -37,7 +37,7 @@ function App() {
         <MotionChart dataPoints={dataPoints} />
       </div>
 
-      <div>
+      <div className="demoCard">
         <h3>Partial Rerendering</h3>
         <DynamicChart />
       </div>

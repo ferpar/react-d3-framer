@@ -22,7 +22,7 @@ const width = 400;
 
 const styles = {
   height: "100%",
-  width: "60%",
+  width: "80%",
 };
 
 const margins = {
@@ -105,7 +105,7 @@ const DynamicChart = () => {
         transition={{ duration: pathDuration, delay: 0.2 }}
         d={newLinePath}
         fill="none"
-        stroke="white"
+        stroke="var(--chart-color)"
       />
     );
 
@@ -129,7 +129,7 @@ const DynamicChart = () => {
           cy={y}
           r={5}
           fill="white"
-          stroke="var(--background-color)"
+          stroke="var(--chart-color)"
           strokeWidth={3}
         />
       );

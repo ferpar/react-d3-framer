@@ -12,7 +12,7 @@ const width = 400;
 
 const styles = {
   height: "100%",
-  width: "60%",
+  width: "80%",
 };
 
 const margins = {
@@ -58,7 +58,7 @@ const MotionChart = ({ dataPoints }: MotionGraphProps) => {
         cy={y}
         r={5}
         fill="white"
-        stroke="var(--background-color)"
+        stroke="var(--chart-color)"
         strokeWidth={3}
       />
     );
@@ -83,7 +83,7 @@ const MotionChart = ({ dataPoints }: MotionGraphProps) => {
           transition={{ duration: 1.7, delay: 0.2 }}
           d={linePath}
           fill="none"
-          stroke="white"
+          stroke="var(--chart-color)"
         />
         {/* Circles */}
         {circles.map((circle) => circle)}
