@@ -14,6 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
   --card-color: #1a1a1a;
   --chart-color: #646cff;
+  --button-color: #7f85f5;
 }
 
 a {
@@ -69,6 +70,7 @@ button:focus-visible {
     background-color: #ffffff;
     --card-color: #f9f9f9;
     --char-color: #646cff;
+    --button-color: #a5a7da;
   }
   a:hover {
     color: #747bff;
@@ -76,4 +78,9 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+button {
+  background-color: var(--button-color);
+  margin-top: 1rem;
 }

@@ -148,13 +148,13 @@ const DynamicChart = () => {
         flexDirection: "column",
       }}
     >
-      <button onClick={addRandomDatapoint}>Add Datapoint</button>
       <svg style={styles} viewBox={`0 0 ${width} ${height}`}>
         {/* Line */}
         {path}
         {/* Circles */}
         {circles.map((circle) => circle)}
       </svg>
+      <button onClick={addRandomDatapoint}>Add Datapoint</button>
     </div>
   );
 };

@@ -32,9 +32,9 @@ function App() {
       <div className="demoCard">
         <div>
           <h3>Full Rerendering + Rescale</h3>
-          <button onClick={addRandomDatapoint}>Add Datapoint</button>
         </div>
         <MotionChart dataPoints={dataPoints} />
+          <button onClick={addRandomDatapoint}>Add Datapoint</button>
       </div>
 
       <div className="demoCard">
