@@ -31,14 +31,14 @@ function App() {
       </p>
       <div>
         <div>
-          <p>Full Rerendering + Rescale</p>
+          <h3>Full Rerendering + Rescale</h3>
           <button onClick={addRandomDatapoint}>Add Datapoint</button>
         </div>
         <MotionChart dataPoints={dataPoints} />
       </div>
 
       <div>
-        <p>Partial Rerendering</p>
+        <h3>Partial Rerendering</h3>
         <DynamicChart />
       </div>
     </>

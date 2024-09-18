@@ -1,6 +1,7 @@
 import * as d3 from "d3";
 import React from "react";
 import { motion } from "framer-motion";
+import "./Charts.css";
 
 type Points = [number, number][];
 const dataPoints: Points = [
@@ -119,6 +120,7 @@ const DynamicChart = () => {
       const y = yScale(point[1]);
       return (
         <motion.circle
+          className="circle"
           initial={{ cy: height - margins.bottom, opacity: 0, scale: 0 }}
           animate={{ cy: y, opacity: 1, scale: 1 }}
           transition={{ duration: 0.2, delay: delay }}

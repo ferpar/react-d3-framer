@@ -1,0 +1,10 @@
+
+.circle {
+  transition: all 0.3s; 
+  cursor: pointer;
+}
+
+
+.circle:hover {
+  fill: #f00;
+}

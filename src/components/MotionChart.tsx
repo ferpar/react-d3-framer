@@ -1,5 +1,6 @@
 import * as d3 from "d3";
 import { motion } from "framer-motion";
+import "./Charts.css";
 
 type Points = [number, number][];
 type MotionGraphProps = {
